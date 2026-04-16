@@ -16,19 +16,13 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173", // your frontend port
+  origin: [
+    "https://campusx-nd3y.vercel.app",   // current frontend
+    "https://campusx-s2r5.vercel.app",
+    "https://campusx-fumw.vercel.app"    
+  ],
   credentials: true
 }));
-
-// app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
-
-// // app.use(cors({
-// //   origin: [
-// //     "https://campusx-nd3y.vercel.app",   // current frontend
-// //     "https://campusx-s2r5.vercel.app"    // old one (optional)
-// //   ],
-// //   credentials: true
-// // }));
 app.use(express.json());
 app.use(morgan("dev"));
 
