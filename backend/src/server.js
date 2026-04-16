@@ -15,9 +15,6 @@ connectDB();
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
-const cors = require("cors");
-
 app.use(cors({
   origin: [
     "https://campusx-nd3y.vercel.app",   // current frontend
