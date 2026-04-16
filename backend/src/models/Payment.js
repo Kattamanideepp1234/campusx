@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const paymentSchema = new mongoose.Schema(
   {
+    _id: { type: String, required: true },
     bookingId: { type: String, required: true },
     amount: { type: Number, required: true },
     provider: { type: String, default: "mock" },

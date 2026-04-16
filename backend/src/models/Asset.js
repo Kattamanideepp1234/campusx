@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const assetSchema = new mongoose.Schema(
   {
+    _id: { type: String, required: true },
     title: { type: String, required: true },
     type: { type: String, enum: ["Classroom", "Laboratory", "Auditorium", "Sports Complex"], required: true },
     location: { type: String, required: true },
